@@ -1,0 +1,108 @@
+CREATE Table PrevisionSeance
+(
+   Id                   int not null,
+   CategogiesSalleFormation_id      int not null,
+   titre                varchar(254),
+   objectif             varchar(254),
+   ordre                int,
+   duree                int,
+   primary key (Id)
+);
+
+---------------------------------
+CREATE TABLE Activite
+(
+   CategogieActivite_id         int not null,
+   StrategiePedagogie_id       int not null,
+   Id                   int,
+   Objectif             varchar(254),
+   Duree                int,
+   Commentaire          varchar(254)
+);
+
+---------------------------------
+
+CREATE TABLE StrategiePedagogie
+(
+   id                   int not null,
+   titre                varchar(254),
+   description          varchar(254),
+   primary key (id)
+);
+
+---------------------------------
+
+CREATE TABLE CategoriesSalleFormation
+(
+   id                   int not null,
+   nom                  varchar(254),
+   code                 varchar(254),
+   description          varchar(254),
+   primary key (id)
+);
+
+----------------------------------
+
+CREATE TABLE CategorieActivite
+(
+   id                   int not null,
+   nom                  varchar(254),
+   primary key (id)
+);
+
+-----------------------------------
+
+CREATE TABLE Salle
+(
+   id                   int not null,
+   CategoriesSalleFormation_id        int not null,
+   nom                  varchar(254),
+   code                 varchar(254),
+   description          varchar(254),
+   primary key (id)
+);
+
+------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
